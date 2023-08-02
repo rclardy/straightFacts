@@ -1,0 +1,39 @@
+html {
+  background: rgb(53, 52, 55);
+  background: linear-gradient(
+    90deg,
+    rgba(53, 52, 55, 1) 0%,
+    rgba(24, 85, 54, 1) 41%,
+    rgba(16, 119, 140, 1) 100%
+  );
+  font-family: 'Raleway', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 1.5rem;
+}
+
+.section-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Added to make sure the container takes the full viewport height */
+  padding-bottom: 3rem;
+}
+
+.fact {
+  height: 200px; /* Increased height for visibility */
+  width: 300px; /* Increased width for visibility */
+  background-color: lightgray; /* Added background color for visibility */
+  text-align: center; /* Center text inside the .fact container */
+  padding: 20px; /* Added padding for better presentation */
+}
+#source a {
+  text-decoration: none;
+  color: #000;
+}
