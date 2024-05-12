@@ -1,6 +1,8 @@
-const URL_random = 'https://uselessfacts.jsph.pl/api/v2/facts/random';
+const apiKey = process.env.GIPHY_API_KEY;
+const randomGifURL = `https://api.giphy.com/v1/gifs/random?api_key=${apiKey}`;
+const randomFactURL = 'https://uselessfacts.jsph.pl/api/v2/facts/random';
 
-fetch(URL_random)
+fetch(randomFactURL)
   .then((res) => res.json())
   .then((data) => {
     document.getElementById('quote').innerText = data.text;
@@ -14,4 +16,10 @@ fetch(URL_random)
     const sourceElement = document.getElementById('source');
     sourceElement.innerHTML = ''; // Clear previous content
     sourceElement.appendChild(sourceLink); // Append the anchor element
+  });
+
+fetch(randomGifURL)
+  .then((res) => res.json())
+  .then((data) => {
+    console.log(data);
   });
